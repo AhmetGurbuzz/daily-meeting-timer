@@ -1,38 +1,76 @@
 .App {
-  text-align: center;
+    text-align: center;
 }
 
 .App-logo {
-  height: 40vmin;
-  pointer-events: none;
+    pointer-events: none;
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
+    .App-logo {
+        animation: App-logo-spin infinite 20s linear;
+    }
 }
 
 @keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.circle-container {
+    position: relative;
+    width: 33em;
+    height: 33em;
+    padding: 2em;
+    /*2.8em = 2em*1.4 (2em = half the width of a link with img, 1.4 = sqrt(2))*/
+    border: dashed 2px #c8a5ea;
+    border-radius: 50%;
+    margin: 4em auto 0; /* space from top */
+}
+
+.circle-user {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 8em;
+    height: 8em;
+    margin: -4.2em; /* -width/2 + padding */
+    padding: .2rem;
+    text-align: center;
+    text-decoration: none;
+    background-color: #068ee7;
+    border-radius: 50%;
+    border: 3px solid lightgrey;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    user-select: none;
+    outline: none;
+    transition: all .4s ease-in;
+}
+
+.circle-user:hover {
+    background-color: rgba(10, 155, 205, 0.9);
+    border: 3px dashed #d3d3d355;
+}
+
+.circle-user-clicked{
+    background-color: orangered;
+}
+
+.circle-p {
+    color: white;
+    align-self: center;
+    line-height: 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.circle-label {
+    font-size: 1.4rem;
+    color: white;
 }
